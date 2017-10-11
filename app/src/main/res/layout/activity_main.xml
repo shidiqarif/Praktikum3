@@ -6,30 +6,78 @@
     android:layout_height="match_parent"
     tools:context="com.shidiqarifs.praktikum3.MainActivity">
 
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-        <TextView
-            android:id="@+id/labelmerah"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/label_merah"/>
-        <SeekBar
-            android:id="@+id/seek_merah"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:max="255"
-            android:layout_toRightOf="@+id/labelmerah"/>
-    </RelativeLayout>
-
     <TextView
         android:id="@+id/texttenggah"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Hello World!"
+        android:textSize="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+<RelativeLayout
+    android:layout_width="368dp"
+    android:layout_height="wrap_content"
+    tools:layout_editor_absoluteX="0dp"
+    app:layout_constraintBottom_toBottomOf="@+id/texttenggah"
+    android:layout_marginBottom="95dp"
+    android:gravity="center_horizontal">
 
+    <CheckBox
+        android:id="@+id/bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bold"
+
+        />
+
+
+
+    <CheckBox
+        android:id="@+id/italic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Italic"
+        tools:layout_editor_absoluteX="161dp"
+        tools:layout_editor_absoluteY="61dp"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/bold"
+        android:layout_toEndOf="@+id/bold"
+        android:layout_marginLeft="49dp"
+        android:layout_marginStart="49dp" />
+
+    <CheckBox
+        android:id="@+id/underline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Underline"
+        tools:layout_editor_absoluteX="262dp"
+        tools:layout_editor_absoluteY="61dp"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/italic"
+        android:layout_toEndOf="@+id/italic"
+        android:layout_marginLeft="47dp"
+        android:layout_marginStart="47dp" />
+</RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="16dp">
+
+        <TextView
+            android:id="@+id/labelmerah"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_merah" />
+
+        <SeekBar
+            android:id="@+id/seek_merah"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/labelmerah"
+            android:max="255" />
+    </RelativeLayout>
 </android.support.constraint.ConstraintLayout>
